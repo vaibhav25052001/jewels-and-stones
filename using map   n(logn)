@@ -1,0 +1,10 @@
+unordered_map<char,int>m;    //n(logn)
+        for(auto i:stones)
+        m[i]++;
+
+        int sum=0;
+        for(auto i:jewels){
+            if(m.find(i)!=m.end())
+            sum+=m.find(i)->second;
+        }
+        return sum;
